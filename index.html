@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRUTALIST.OS | Raw Digital Experience</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400;700;800&display=swap');
+
+:root {
+    --raw-black: #0a0a0a;
+    --concrete: #e5e5e5;
+    --neon-red: #ff2a2a;
+    --electric-blue: #0066ff;
+    --acid-yellow: #ffff00;
+    --hot-pink: #ff00ff;
+    --border-thick: 4px solid var(--raw-black);
+    --shadow-hard: 8px 8px 0px var(--raw-black);
+    --shadow-hover: 12px 12px 0px var(--raw-black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--concrete);
+    color: var(--raw-black);
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: crosshair;
+}
+
+/* GLITCH TEXT EFFECT */
+.glitch {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--neon-red);
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--electric-blue);
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% { clip: rect(31px, 9999px, 94px, 0); }
+    20% { clip: rect(58px, 9999px, 14px, 0); }
+    40% { clip: rect(12px, 9999px, 78px, 0); }
+    60% { clip: rect(89px, 9999px, 23px, 0); }
+    80% { clip: rect(45px, 9999px, 67px, 0); }
+    100% { clip: rect(2px, 9999px, 96px, 0); }
+}
+
+@keyframes glitch-anim2 {
+    0% { clip: rect(65px, 9999px, 99px, 0); }
+    20% { clip: rect(23px, 9999px, 45px, 0); }
+    40% { clip: rect(87px, 9999px, 12px, 0); }
+    60% { clip: rect(34px, 9999px, 78px, 0); }
+    80% { clip: rect(56px, 9999px, 34px, 0); }
+    100% { clip: rect(12px, 9999px, 89px, 0); }
+}
+
+/* NAVIGATION */
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--acid-yellow);
+    border-bottom: var(--border-thick);
+    z-index: 1000;
+    padding: 1rem;
+    box-shadow: var(--shadow-hard);
+}
+
+.nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    border: var(--border-thick);
+    padding: 0.5rem 1rem;
+    background: white;
+    box-shadow: 4px 4px 0px var(--raw-black);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.logo:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--raw-black);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    font-family: 'Space Mono', monospace;
+    background: white;
+    border: var(--border-thick);
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    box-shadow: 4px 4px 0px var(--raw-black);
+    transition: all 0.2s;
+    text-decoration: none;
+    color: var(--raw-black);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--neon-red);
+    transition: left 0.3s;
+    z-index: -1;
+}
+
+.nav-btn:hover::before {
+    left: 0;
+}
+
+.nav-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--raw-black);
+    color: white;
+}
+
+.nav-btn.active {
+    background: var(--raw-black);
+    color: white;
+    box-shadow: 4px 4px 0px var(--neon-red);
+}
+
+/* PAGE CONTAINER */
+.page {
+    display: none;
+    min-height: 100vh;
+    padding-top: 100px;
+    animation: pageLoad 0.5s ease-out;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes pageLoad {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--concrete),
+        var(--concrete) 10px,
+        #d4d4d4 10px,
+        #d4d4d4 20px
+    );
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 15vw, 12rem);
+    font-weight: 800;
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    margin-bottom: 2rem;
+    border: var(--border-thick);
+    background: white;
+    padding: 2rem;
+    box-shadow: var(--shadow-hard);
+    transform: rotate(-2deg);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 600px;
+    background: var(--acid-yellow);
+    border: var(--border-thick);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-hard);
+    transform: rotate(1deg);
+    margin-bottom: 3rem;
+}
+
+.cta-group {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.brutal-btn {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1.5rem 3rem;
+    border: var(--border-thick);
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-hard);
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.brutal-btn.primary {
+    background: var(--neon-red);
+    color: white;
+}
+
+.brutal-btn.secondary {
+    background: var(--electric-blue);
+    color: white;
+}
+
+.brutal-btn:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.brutal-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px var(--raw-black);
+}
+
+/* GEOMETRIC DECORATIONS */
+.geo-shape {
+    position: absolute;
+    border: var(--border-thick);
+    box-shadow: var(--shadow-hard);
+    pointer-events: none;
+}
+
+.shape-1 {
+    width: 200px;
+    height: 200px;
+    background: var(--hot-pink);
+    top: 10%;
+    right: 5%;
+    transform: rotate(45deg);
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 150px;
+    height: 150px;
+    background: var(--acid-yellow);
+    bottom: 10%;
+    left: 5%;
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+    width: 100px;
+    height: 300px;
+    background: var(--electric-blue);
+    top: 20%;
+    left: 10%;
+    transform: rotate(-15deg);
+    animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+    50% { transform: translateY(-20px) rotate(var(--rot, 0deg)); }
+}
+
+/* CONTENT GRIDS */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.section-header {
+    font-family: 'Syne', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: var(--border-thick);
+    background: white;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-hard);
+    margin-bottom: 3rem;
+    display: inline-block;
+    transform: rotate(-1deg);
+}
+
+.grid-brutal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.card-brutal {
+    background: white;
+    border: var(--border-thick);
+    box-shadow: var(--shadow-hard);
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.card-brutal::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(0,0,0,0.03) 10px,
+        rgba(0,0,0,0.03) 20px
+    );
+    pointer-events: none;
+}
+
+.card-brutal:hover {
+    transform: translate(-4px, -4px) rotate(1deg);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--neon-red);
+    opacity: 0.3;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    line-height: 1;
+}
+
+.card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--raw-black);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* ASYMMETRIC LAYOUT */
+.asymmetric {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.asymmetric.reverse {
+    grid-template-columns: 1fr 2fr;
+}
+
+.text-block {
+    background: white;
+    border: var(--border-thick);
+    padding: 3rem;
+    box-shadow: var(--shadow-hard);
+    position: relative;
+}
+
+.text-block::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    background: var(--acid-yellow);
+    z-index: -1;
+    border: var(--border-thick);
+}
+
+.image-block {
+    border: var(--border-thick);
+    box-shadow: var(--shadow-hard);
+    overflow: hidden;
+    position: relative;
+}
+
+.image-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%) contrast(1.2);
+    transition: all 0.3s;
+}
+
+.image-block:hover img {
+    filter: grayscale(0%) contrast(1);
+    transform: scale(1.05);
+}
+
+/* MARQUEE */
+.marquee-container {
+    background: var(--raw-black);
+    color: white;
+    padding: 1rem 0;
+    overflow: hidden;
+    border-top: var(--border-thick);
+    border-bottom: var(--border-thick);
+    margin: 4rem 0;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+}
+
+.marquee-item {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.marquee-item::after {
+    content: '◆';
+    color: var(--neon-red);
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* FORM ELEMENTS */
+.brutal-form {
+    background: white;
+    border: var(--border-thick);
+    padding: 3rem;
+    box-shadow: var(--shadow-hard);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    background: var(--acid-yellow);
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border: 2px solid var(--raw-black);
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    border: var(--border-thick);
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    background: var(--concrete);
+    transition: all 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    background: white;
+    box-shadow: 4px 4px 0px var(--neon-red);
+    transform: translate(-2px, -2px);
+}
+
+textarea.form-input {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* TERMINAL STYLE */
+.terminal {
+    background: var(--raw-black);
+    color: #00ff00;
+    padding: 2rem;
+    border: var(--border-thick);
+    box-shadow: var(--shadow-hard);
+    font-family: 'Space Mono', monospace;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.terminal::before {
+    content: '>';
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: var(--neon-red);
+    font-weight: bold;
+}
+
+.terminal-content {
+    margin-left: 2rem;
+    line-height: 2;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: #00ff00;
+    animation: blink 1s infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* GALLERY GRID */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.gallery-item {
+    aspect-ratio: 1;
+    border: var(--border-thick);
+    box-shadow: var(--shadow-hard);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    background: var(--concrete);
+}
+
+.gallery-item:nth-child(2) {
+    grid-column: span 2;
+    aspect-ratio: 2/1;
+}
+
+.gallery-item:nth-child(4) {
+    grid-row: span 2;
+    aspect-ratio: 1/2;
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--neon-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s;
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* PRICING CARDS */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+.pricing-card {
+    background: white;
+    border: var(--border-thick);
+    padding: 2rem;
+    box-shadow: var(--shadow-hard);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.pricing-card.featured {
+    background: var(--acid-yellow);
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.pricing-card.featured::before {
+    content: 'POPULAR';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: var(--neon-red);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border: var(--border-thick);
+    transform: rotate(5deg);
+}
+
+.pricing-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translate(-4px, -4px);
+}
+
+.price {
+    font-family: 'Syne', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 1rem 0;
+    border-bottom: 4px solid var(--raw-black);
+    display: inline-block;
+}
+
+.feature-list {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.feature-list li {
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.feature-list li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--neon-red);
+}
+
+/* FOOTER */
+footer {
+    background: var(--raw-black);
+    color: white;
+    padding: 4rem 2rem;
+    border-top: var(--border-thick);
+    margin-top: 4rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-col h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--acid-yellow);
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-col a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.footer-col a:hover {
+    border-bottom-color: var(--neon-red);
+    color: var(--acid-yellow);
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 3rem auto 0;
+    padding-top: 2rem;
+    border-top: 2px solid #333;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* MOBILE MENU */
+.mobile-menu-btn {
+    display: none;
+    background: white;
+    border: var(--border-thick);
+    padding: 0.75rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--raw-black);
+}
+
+.mobile-menu-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--raw-black);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--concrete);
+    border-left: var(--border-thick);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--raw-black);
+    border: 2px solid var(--concrete);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-red);
+}
+
+/* SELECTION */
+::selection {
+    background: var(--acid-yellow);
+    color: var(--raw-black);
+}
+
+/* CUSTOM CURSOR */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--neon-red);
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s;
+    mix-blend-mode: difference;
+}
+
+.custom-cursor.active {
+    transform: scale(2);
+    background: var(--neon-red);
+}
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+    .asymmetric, .asymmetric.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+        order: -1;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 1;
+        aspect-ratio: 1;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        border: var(--border-thick);
+        padding: 1rem;
+        box-shadow: var(--shadow-hard);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 3rem;
+        letter-spacing: -2px;
+    }
+
+    .section-header {
+        font-size: 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .brutal-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* LOADING SCREEN */
+.loader {
+    position: fixed;
+    inset: 0;
+    background: var(--raw-black);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    color: white;
+    margin-top: 2rem;
+    animation: pulse 1.5s infinite;
+}
+
+.loader-bar {
+    width: 300px;
+    height: 20px;
+    border: 4px solid white;
+    padding: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader-progress {
+    height: 100%;
+    background: var(--neon-red);
+    width: 0%;
+    transition: width 0.3s;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* INTERACTIVE ELEMENTS */
+.draggable {
+    cursor: move;
+    position: absolute;
+    user-select: none;
+}
+
+.color-switcher {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    border: var(--border-thick);
+    padding: 1rem;
+    box-shadow: var(--shadow-hard);
+    z-index: 999;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--raw-black);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.color-btn:hover {
+    transform: scale(1.2);
+}
+
+/* ASCII ART */
+.ascii-art {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    white-space: pre;
+    overflow-x: auto;
+    background: var(--raw-black);
+    color: var(--acid-yellow);
+    padding: 2rem;
+    border: var(--border-thick);
+    box-shadow: var(--shadow-hard);
+}
+
+/* NOTIFICATION */
+.notification {
+    position: fixed;
+    top: 100px;
+    right: -400px;
+    background: var(--neon-red);
+    color: white;
+    padding: 1.5rem;
+    border: var(--border-thick);
+    box-shadow: var(--shadow-hard);
+    z-index: 9998;
+    transition: right 0.3s;
+    max-width: 350px;
+}
+
+.notification.show {
+    right: 2rem;
+}
+
+.notification-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* CANVAS BACKGROUND */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    pointer-events: none;
+}
+</style>
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div class="loader" id="loader">
+    <div class="loader-bar">
+        <div class="loader-progress" id="loader-progress"></div>
+    </div>
+    <div class="loader-text">INITIALIZING BRUTALIST.OS...</div>
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div class="custom-cursor" id="cursor"></div>
+
+<!-- CANVAS BACKGROUND -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- NOTIFICATION -->
+<div class="notification" id="notification">
+    <div class="notification-title">System Alert</div>
+    <div id="notification-text">Welcome to brutalist experience.</div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="nav-container">
+    <div class="nav-inner">
+        <div class="logo" onclick="showPage('home')">BRUTALIST.OS</div>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰ MENU</button>
+        <div class="nav-links" id="navLinks">
+            <button class="nav-btn active" onclick="showPage('home')">Home</button>
+            <button class="nav-btn" onclick="showPage('about')">About</button>
+            <button class="nav-btn" onclick="showPage('work')">Work</button>
+            <button class="nav-btn" onclick="showPage('services')">Services</button>
+            <button class="nav-btn" onclick="showPage('lab')">Lab</button>
+            <button class="nav-btn" onclick="showPage('contact')">Contact</button>
+            <button class="nav-btn" onclick="showPage('manifesto')">Manifesto</button>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE 1: HOME -->
+<section id="home" class="page active">
+    <div class="hero">
+        <div class="geo-shape shape-1" style="--rot: 45deg"></div>
+        <div class="geo-shape shape-2" style="--rot: 0deg"></div>
+        <div class="geo-shape shape-3" style="--rot: -15deg"></div>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="DIGITAL BRUTALISM">DIGITAL BRUTALISM</h1>
+            <div class="hero-subtitle">
+                Raw aesthetics. Uncompromising functionality. Pure HTML structure exposed like concrete.
+            </div>
+            <div class="cta-group">
+                <a href="#" class="brutal-btn primary" onclick="showPage('work'); return false;">View Projects</a>
+                <a href="#" class="brutal-btn secondary" onclick="showPage('manifesto'); return false;">Read Manifesto</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-header">Latest Experiments</h2>
+        <div class="grid-brutal">
+            <div class="card-brutal">
+                <div class="card-number">01</div>
+                <div class="card-title">Raw Concrete</div>
+                <p>Exposing underlying structure of web design. No gradients, no shadows, just pure geometric forms and high contrast.</p>
+            </div>
+            <div class="card-brutal">
+                <div class="card-number">02</div>
+                <div class="card-title">Neo Typography</div>
+                <p>Oversized fonts that demand attention. Asymmetric layouts that break grid. Content as architecture.</p>
+            </div>
+            <div class="card-brutal">
+                <div class="card-number">03</div>
+                <div class="card-title">Functional Art</div>
+                <p>Every element serves a purpose. Decoration is stripped away. What remains is honest, direct, and impossible to ignore.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <div class="marquee-item">Raw Aesthetics</div>
+            <div class="marquee-item">Bold Typography</div>
+            <div class="marquee-item">Exposed Structure</div>
+            <div class="marquee-item">High Contrast</div>
+            <div class="marquee-item">Geometric Forms</div>
+            <div class="marquee-item">Raw Aesthetics</div>
+            <div class="marquee-item">Bold Typography</div>
+            <div class="marquee-item">Exposed Structure</div>
+            <div class="marquee-item">High Contrast</div>
+            <div class="marquee-item">Geometric Forms</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-content">
+                > system.status --check<br>
+                > BRUTALIST.OS v2.0 operational<br>
+                > HTML structure: EXPOSED<br>
+                > CSS complexity: MAXIMUM<br>
+                > JavaScript functionality: 100%<br>
+                > Design philosophy: RAW<br>
+                > <span class="cursor"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PAGE 2: ABOUT -->
+<section id="about" class="page">
+    <div class="container">
+        <h2 class="section-header">The Architect</h2>
+        <div class="asymmetric" style="margin-top: 4rem;">
+            <div class="text-block">
+                <h3 style="font-family: 'Syne', sans-serif; font-size: 2rem; margin-bottom: 1rem;">WE ARE BRUTALIST</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Founded in digital concrete jungle of 2024, we reject polished, homogeneous web. Our approach strips away unnecessary, exposing raw structure beneath.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Inspired by Le Corbusier's Unité d'Habitation and raw concrete (béton brut) of mid-century architecture, we translate these principles into digital space.
+                </p>
+                <div style="background: var(--acid-yellow); border: var(--border-thick); padding: 1rem; margin-top: 2rem; transform: rotate(-1deg);">
+                    <strong>PHILOSOPHY:</strong> Function over form. Honesty over decoration. Structure over style.
+                </div>
+            </div>
+            <div class="image-block">
+                <div style="width: 100%; height: 100%; background: repeating-linear-gradient(45deg, #333 0px, #333 10px, #666 10px, #666 20px); min-height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                    [CONCRETE TEXTURE]
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-brutal" style="margin-top: 6rem;">
+            <div class="card-brutal" style="background: var(--neon-red); color: white;">
+                <div class="card-title" style="border-color: white;">2019</div>
+                <p>The foundation. We started as a reaction against overly polished, template-driven web design.</p>
+            </div>
+            <div class="card-brutal" style="background: var(--electric-blue); color: white;">
+                <div class="card-title" style="border-color: white;">2021</div>
+                <p>First major project. A brutalist e-commerce platform that increased conversion by 300%.</p>
+            </div>
+            <div class="card-brutal" style="background: var(--hot-pink); color: white;">
+                <div class="card-title" style="border-color: white;">2024</div>
+                <p>Global recognition. Featured in design awards for pushing boundaries of web aesthetics.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PAGE 3: WORK -->
+<section id="work" class="page">
+    <div class="container">
+        <h2 class="section-header">Selected Works</h2>
+        <div class="gallery" style="margin-top: 3rem;">
+            <div class="gallery-item" onclick="showNotification('Project: CONCRETE DIGITAL')">
+                <div style="width: 100%; height: 100%; background: var(--raw-black); display: flex; align-items: center; justify-content: center; color: white; font-family: 'Syne'; font-size: 1.5rem;">
+                    PROJECT_01
+                </div>
+                <div class="gallery-overlay">View Case</div>
+            </div>
+            <div class="gallery-item" onclick="showNotification('Project: RAW STRUCTURE')">
+                <div style="width: 100%; height: 100%; background: var(--neon-red); display: flex; align-items: center; justify-content: center; color: white; font-family: 'Syne'; font-size: 2rem;">
+                    PROJECT_02
+                </div>
+                <div class="gallery-overlay">View Case</div>
+            </div>
+            <div class="gallery-item" onclick="showNotification('Project: BOLD SYSTEMS')">
+                <div style="width: 100%; height: 100%; background: var(--electric-blue); display: flex; align-items: center; justify-content: center; color: white; font-family: 'Syne'; font-size: 1.5rem;">
+                    PROJECT_03
+                </div>
+                <div class="gallery-overlay">View Case</div>
+            </div>
+            <div class="gallery-item" onclick="showNotification('Project: EXPOSED GRID')">
+                <div style="width: 100%; height: 100%; background: var(--acid-yellow); display: flex; align-items: center; justify-content: center; color: black; font-family: 'Syne'; font-size: 1.5rem;">
+                    PROJECT_04
+                </div>
+                <div class="gallery-overlay">View Case</div>
+            </div>
+            <div class="gallery-item" onclick="showNotification('Project: HEAVY TYPE')">
+                <div style="width: 100%; height: 100%; background: var(--hot-pink); display: flex; align-items: center; justify-content: center; color: white; font-family: 'Syne'; font-size: 1.5rem;">
+                    PROJECT_05
+                </div>
+                <div class="gallery-overlay">View Case</div>
+            </div>
+            <div class="gallery-item" onclick="showNotification('Project: BRUTAL TRUTH')">
+                <div style="width: 100%; height: 100%; background: repeating-linear-gradient(90deg, var(--raw-black) 0px, var(--raw-black) 20px, white 20px, white 40px); display: flex; align-items: center; justify-content: center; color: var(--neon-red); font-family: 'Syne'; font-size: 1.5rem; font-weight: 800;">
+                    PROJECT_06
+                </div>
+                <div class="gallery-overlay">View Case</div>
+            </div>
+        </div>
+
+        <div class="terminal" style="margin-top: 4rem;">
+            <div class="terminal-content">
+                > ls -la /projects/<br>
+                > drwxr-xr-x 6 brutalist users 4096 Jan 08 2024 .<br>
+                > drwxr-xr-x 18 brutalist users 4096 Jan 08 2024 ..<br>
+                > -rw-r--r-- 1 brutalist users 2.4M Jan 08 2024 concrete_digital.zip<br>
+                > -rw-r--r-- 1 brutalist users 1.8M Jan 08 2024 raw_structure.zip<br>
+                > -rw-r--r-- 1 brutalist users 3.1M Jan 08 2024 bold_systems.zip<br>
+                > <span class="cursor"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PAGE 4: SERVICES -->
+<section id="services" class="page">
+    <div class="container">
+        <h2 class="section-header">Services</h2>
+        <div class="pricing-grid" style="margin-top: 4rem;">
+            <div class="pricing-card">
+                <h3 style="font-family: 'Syne', sans-serif; font-size: 1.5rem; text-transform: uppercase;">Raw</h3>
+                <div class="price">$5K</div>
+                <ul class="feature-list">
+                    <li>Single page website</li>
+                    <li>Exposed HTML structure</li>
+                    <li>High contrast design</li>
+                    <li>Basic SEO setup</li>
+                    <li>2 revision rounds</li>
+                </ul>
+                <button class="brutal-btn secondary" style="width: 100%;" onclick="showNotification('Raw package selected')">Select Plan</button>
+            </div>
+            <div class="pricing-card featured">
+                <h3 style="font-family: 'Syne', sans-serif; font-size: 1.5rem; text-transform: uppercase;">Brutal</h3>
+                <div class="price">$12K</div>
+                <ul class="feature-list">
+                    <li>Multi-page website (5-8)</li>
+                    <li>Custom brutalist animations</li>
+                    <li>Advanced interactions</li>
+                    <li>CMS integration</li>
+                    <li>Performance optimization</li>
+                    <li>5 revision rounds</li>
+                </ul>
+                <button class="brutal-btn primary" style="width: 100%;" onclick="showNotification('Brutal package selected')">Select Plan</button>
+            </div>
+            <div class="pricing-card">
+                <h3 style="font-family: 'Syne', sans-serif; font-size: 1.5rem; text-transform: uppercase;">Concrete</h3>
+                <div class="price">$25K</div>
+                <ul class="feature-list">
+                    <li>Full web application</li>
+                    <li>Custom brutalist UI system</li>
+                    <li>Complex animations</li>
+                    <li>API development</li>
+                    <li>Database architecture</li>
+                    <li>Unlimited revisions</li>
+                    <li>6 months support</li>
+                </ul>
+                <button class="brutal-btn secondary" style="width: 100%;" onclick="showNotification('Concrete package selected')">Select Plan</button>
+            </div>
+        </div>
+
+        <div class="grid-brutal" style="margin-top: 6rem;">
+            <div class="card-brutal">
+                <div class="card-title">Web Design</div>
+                <p>Raw, unpolished aesthetics that stand out. No templates. Pure custom brutalist architecture.</p>
+            </div>
+            <div class="card-brutal">
+                <div class="card-title">Development</div>
+                <p>Clean, semantic HTML. Efficient CSS. Vanilla JavaScript. Maximum performance, minimal bloat.</p>
+            </div>
+            <div class="card-brutal">
+                <div class="card-title">Branding</div>
+                <p>Bold typography systems. High-contrast color palettes. Geometric logo designs.</p>
+            </div>
+            <div class="card-brutal">
+                <div class="card-title">Consulting</div>
+                <p>Audit your current design. Implement brutalist principles. Stand out from crowd.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PAGE 5: LAB -->
+<section id="lab" class="page">
+    <div class="container">
+        <h2 class="section-header">Experimental Lab</h2>
+        <div style="background: white; border: var(--border-thick); padding: 3rem; margin-top: 3rem; box-shadow: var(--shadow-hard);">
+            <h3 style="font-family: 'Syne', sans-serif; font-size: 2rem; margin-bottom: 2rem;">Interactive Playground</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+                <div>
+                    <label style="display: block; font-weight: 700; margin-bottom: 0.5rem;">Border Thickness</label>
+                    <input type="range" min="1" max="10" value="4" id="borderRange" style="width: 100%;" oninput="updateStyles()">
+                </div>
+                <div>
+                    <label style="display: block; font-weight: 700; margin-bottom: 0.5rem;">Shadow Offset</label>
+                    <input type="range" min="0" max="20" value="8" id="shadowRange" style="width: 100%;" oninput="updateStyles()">
+                </div>
+            </div>
+            <div id="preview-box" style="background: var(--acid-yellow); border: 4px solid var(--raw-black); padding: 2rem; box-shadow: 8px 8px 0px var(--raw-black); text-align: center; font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; transition: all 0.3s;">
+                PREVIEW BOX
+            </div>
+            <div style="margin-top: 3rem;">
+                <button class="brutal-btn primary" onclick="randomizeColors()">Randomize Colors</button>
+                <button class="brutal-btn secondary" onclick="glitchEffect()" style="margin-left: 1rem;">Trigger Glitch</button>
+                <button class="brutal-btn" onclick="resetStyles()" style="margin-left: 1rem; background: white;">Reset</button>
+            </div>
+        </div>
+
+        <div class="ascii-art" style="margin-top: 4rem;">
+████████╗ ██████╗ ██╗     ██╗████████╗ █████╗ ██╗     ██╗███████╗████████╗
+██╔══██╗██╔══██╗██║     ██║╚══██╔══╝██╔══██╗██║     ██║██╔════╝╚══██╔══╝
+██████╔╝██████╔╝██║     ██║   ██║   ███████║██║     ██║███████╗   ██║
+██╔══██╗██╔══██╗██║     ██║   ██║   ██╔══██║██║     ██║╚════██║   ██║
+██║  ██║██║  ██║███████╗██║   ██║   ██║  ██║███████╗██║███████║██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝╚══════╝╚═╝
+        </div>
+
+        <div class="grid-brutal" style="margin-top: 4rem;">
+            <div class="card-brutal" style="cursor: pointer;" onclick="this.style.transform = this.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)'">
+                <div class="card-title">Click to Rotate</div>
+                <p>Interactive card that responds to your click. Brutalist interactions don't have to be boring.</p>
+            </div>
+            <div class="card-brutal" onmouseover="this.style.backgroundColor='var(--neon-red)'; this.style.color='white'" onmouseout="this.style.backgroundColor='white'; this.style.color='var(--raw-black)'">
+                <div class="card-title">Hover to Transform</div>
+                <p>Color shift on hover. High contrast feedback. Immediate visual response.</p>
+            </div>
+            <div class="card-brutal" id="counter-card" onclick="incrementCounter()">
+                <div class="card-title">Click Counter: <span id="click-count">0</span></div>
+                <p>Persistent state within session. Pure JavaScript functionality.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PAGE 6: CONTACT -->
+<section id="contact" class="page">
+    <div class="container">
+        <h2 class="section-header">Make Contact</h2>
+        <div style="max-width: 900px; margin: 4rem auto;">
+            <form class="brutal-form" onsubmit="handleSubmit(event)">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div class="form-group">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-input" placeholder="ENTER NAME" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="ENTER EMAIL" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Project Type</label>
+                    <select class="form-input" style="cursor: pointer;">
+                        <option>Raw Website</option>
+                        <option>Brutal Application</option>
+                        <option>Concrete System</option>
+                        <option>Consulting</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-input" placeholder="DESCRIBE YOUR PROJECT IN RAW DETAIL..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; gap: 1rem; cursor: pointer;">
+                        <input type="checkbox" style="width: 24px; height: 24px; border: 3px solid var(--raw-black);">
+                        <span style="font-weight: 700; text-transform: uppercase;">I accept the brutal terms</span>
+                    </label>
+                </div>
+                <button type="submit" class="brutal-btn primary" style="width: 100%; font-size: 1.5rem;">TRANSMIT MESSAGE</button>
+            </form>
+            <div style="margin-top: 4rem; text-align: center;">
+                <div style="font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">OR REACH US DIRECTLY</div>
+                <div style="font-size: 1.2rem; line-height: 2;">
+                    <div>hello@brutalist.os</div>
+                    <div>+1 (555) BRUTAL-1</div>
+                    <div>123 Concrete Avenue, Raw District</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PAGE 7: MANIFESTO -->
+<section id="manifesto" class="page">
+    <div class="container">
+        <h2 class="section-header">The Manifesto</h2>
+        <div style="max-width: 800px; margin: 4rem auto;">
+            <div style="background: white; border: var(--border-thick); padding: 4rem; box-shadow: var(--shadow-hard); position: relative;">
+                <div style="position: absolute; top: -20px; left: -20px; width: 60px; height: 60px; background: var(--neon-red); border: var(--border-thick); display: flex; align-items: center; justify-content: center; font-family: 'Syne'; font-weight: 800; color: white; font-size: 2rem;">1</div>
+                <h3 style="font-family: 'Syne', sans-serif; font-size: 2rem; margin-bottom: 1.5rem; text-transform: uppercase;">Honesty in Structure</h3>
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+                    We reject false comfort of rounded corners and soft shadows. The web was built on rectangles, borders, and boxes. We expose these structures rather than hide them. Every div is a concrete block. Every border is a structural beam.
+                </p>
+            </div>
+            <div style="background: white; border: var(--border-thick); padding: 4rem; box-shadow: var(--shadow-hard); position: relative; margin-top: 3rem; transform: rotate(1deg);">
+                <div style="position: absolute; top: -20px; left: -20px; width: 60px; height: 60px; background: var(--electric-blue); border: var(--border-thick); display: flex; align-items: center; justify-content: center; font-family: 'Syne'; font-weight: 800; color: white; font-size: 2rem;">2</div>
+                <h3 style="font-family: 'Syne', sans-serif; font-size: 2rem; margin-bottom: 1.5rem; text-transform: uppercase;">Function Over Decoration</h3>
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+                    If an element doesn't serve a purpose, it doesn't exist. No decorative gradients. No meaningless animations. Every pixel earns its place. The result is lightweight, fast, and impossible to ignore.
+                </p>
+            </div>
+            <div style="background: white; border: var(--border-thick); padding: 4rem; box-shadow: var(--shadow-hard); position: relative; margin-top: 3rem; transform: rotate(-1deg);">
+                <div style="position: absolute; top: -20px; left: -20px; width: 60px; height: 60px; background: var(--hot-pink); border: var(--border-thick); display: flex; align-items: center; justify-content: center; font-family: 'Syne'; font-weight: 800; color: white; font-size: 2rem;">3</div>
+                <h3 style="font-family: 'Syne', sans-serif; font-size: 2rem; margin-bottom: 1.5rem; text-transform: uppercase;">Contrast as Communication</h3>
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+                    Black and white. Red and yellow. Maximum contrast for maximum impact. We don't whisper—we shout. Hierarchy is established through scale and weight, not subtlety. If it's important, it's huge.
+                </p>
+            </div>
+
+            <div class="terminal" style="margin-top: 4rem;">
+                <div class="terminal-content">
+                    > cat /manifesto/philosophy.txt<br><br>
+                    > Brutalism is not a trend.<br>
+                    > It is a return to truth.<br>
+                    > It is rejection of polish in favor of purpose.<br>
+                    > It is web, unfiltered.<br><br>
+                    > End of line.<br>
+                    > <span class="cursor"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PAGE 8: 404/EXTRA (Hidden by default, accessible via secret) -->
+<section id="secret" class="page">
+    <div class="container" style="text-align: center; padding-top: 20vh;">
+        <h1 style="font-family: 'Syne', sans-serif; font-size: 10rem; font-weight: 800; border: var(--border-thick); background: var(--neon-red); color: white; display: inline-block; padding: 2rem; box-shadow: var(--shadow-hard); transform: rotate(-5deg);">404</h1>
+        <p style="font-size: 2rem; margin-top: 3rem; background: var(--acid-yellow); border: var(--border-thick); padding: 1.5rem; display: inline-block; box-shadow: var(--shadow-hard);">You found the secret page. Nothing here but raw potential.</p>
+        <div style="margin-top: 3rem;">
+            <button class="brutal-btn primary" onclick="showPage('home')">Return to Reality</button>
+        </div>
+    </div>
+</section>
+
+<!-- COLOR SWITCHER -->
+<div class="color-switcher">
+    <div class="color-btn" style="background: #ff2a2a;" onclick="setAccent('#ff2a2a')" title="Neon Red"></div>
+    <div class="color-btn" style="background: #0066ff;" onclick="setAccent('#0066ff')" title="Electric Blue"></div>
+    <div class="color-btn" style="background: #ffff00;" onclick="setAccent('#ffff00')" title="Acid Yellow"></div>
+    <div class="color-btn" style="background: #ff00ff;" onclick="setAccent('#ff00ff')" title="Hot Pink"></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#" onclick="showPage('home'); return false;">Home</a></li>
+                <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                <li><a href="#" onclick="showPage('work'); return false;">Work</a></li>
+                <li><a href="#" onclick="showPage('services'); return false;">Services</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="#" onclick="showPage('lab'); return false;">Lab</a></li>
+                <li><a href="#" onclick="showPage('manifesto'); return false;">Manifesto</a></li>
+                <li><a href="#" onclick="showNotification('Documentation coming soon')">Documentation</a></li>
+                <li><a href="#" onclick="showNotification('GitHub repo private')">Source Code</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Connect</h3>
+            <ul>
+                <li><a href="#" onclick="showNotification('Twitter/X: @brutalist_os')">Twitter/X</a></li>
+                <li><a href="#" onclick="showNotification('Instagram: @brutalist.os')">Instagram</a></li>
+                <li><a href="#" onclick="showNotification('LinkedIn: Brutalist OS')">LinkedIn</a></li>
+                <li><a href="#" onclick="showNotification('Email: hello@brutalist.os')">Email</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="#" onclick="showNotification('Privacy Policy: We track nothing.')">Privacy Policy</a></li>
+                <li><a href="#" onclick="showNotification('Terms: Use at your own risk.')">Terms of Use</a></li>
+                <li><a href="#" onclick="showNotification('Cookies: We hate them too.')">Cookie Policy</a></li>
+                <li><a href="#" onclick="showPage('secret'); return false;">Secret</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 BRUTALIST.OS // Built with raw HTML, brutal CSS, and pure JavaScript</p>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">No frameworks. No libraries. No mercy.</p>
+    </div>
+</footer>
+
+<script>
+// LOADING SCREEN
+window.addEventListener('load', () => {
+    let progress = 0;
+    const loader = document.getElementById('loader');
+    const progressBar = document.getElementById('loader-progress');
+    const interval = setInterval(() => {
+        progress += Math.random() * 30;
+        if (progress >= 100) {
+            progress = 100;
+            clearInterval(interval);
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 500);
+        }
+        progressBar.style.width = progress + '%';
+    }, 200);
+});
+
+// CUSTOM CURSOR
+const cursor = document.getElementById('cursor');
+let mouseX = 0, mouseY = 0;
+let cursorX = 0, cursorY = 0;
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animateCursor() {
+    cursorX += (mouseX - cursorX) * 0.1;
+    cursorY += (mouseY - cursorY) * 0.1;
+    cursor.style.left = cursorX - 10 + 'px';
+    cursor.style.top = cursorY - 10 + 'px';
+    requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+document.querySelectorAll('a, button, .card-brutal, .gallery-item').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+});
+
+// PAGE NAVIGATION
+function showPage(pageId) {
+    // Hide all pages
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    // Show target page
+    document.getElementById(pageId).classList.add('active');
+
+    // Update nav buttons
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(pageId)) {
+            btn.classList.add('active');
+        }
+    });
+
+    // Close mobile menu if open
+    document.getElementById('navLinks').classList.remove('active');
+
+    // Scroll to top
+    window.scrollTo(0, 0);
+
+    // Show notification for certain pages
+    if (pageId === 'lab') {
+        showNotification('Laboratory access granted');
+    }
+}
+
+// MOBILE MENU
+function toggleMobileMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+}
+
+// NOTIFICATION SYSTEM
+function showNotification(text) {
+    const notif = document.getElementById('notification');
+    document.getElementById('notification-text').textContent = text;
+    notif.classList.add('show');
+    setTimeout(() => {
+        notif.classList.remove('show');
+    }, 3000);
+}
+
+// LAB FUNCTIONS
+let clickCount = 0;
+
+function incrementCounter() {
+    clickCount++;
+    document.getElementById('click-count').textContent = clickCount;
+    if (clickCount === 10) {
+        showNotification('Achievement: Persistent Clicker');
+    }
+}
+
+function updateStyles() {
+    const border = document.getElementById('borderRange').value;
+    const shadow = document.getElementById('shadowRange').value;
+    const preview = document.getElementById('preview-box');
+    preview.style.borderWidth = border + 'px';
+    preview.style.boxShadow = shadow + 'px ' + shadow + 'px 0px var(--raw-black)';
+}
+
+function randomizeColors() {
+    const colors = ['#ff2a2a', '#0066ff', '#ffff00', '#ff00ff', '#00ff00', '#ff8800'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.getElementById('preview-box').style.backgroundColor = randomColor;
+}
+
+function glitchEffect() {
+    const preview = document.getElementById('preview-box');
+    preview.style.transform = 'translate(5px, 5px)';
+    setTimeout(() => preview.style.transform = 'translate(-5px, -5px)', 50);
+    setTimeout(() => preview.style.transform = 'translate(5px, -5px)', 100);
+    setTimeout(() => preview.style.transform = 'translate(0, 0)', 150);
+}
+
+function resetStyles() {
+    document.getElementById('borderRange').value = 4;
+    document.getElementById('shadowRange').value = 8;
+    updateStyles();
+    document.getElementById('preview-box').style.backgroundColor = 'var(--acid-yellow)';
+}
+
+function setAccent(color) {
+    document.documentElement.style.setProperty('--neon-red', color);
+    showNotification('Accent color updated: ' + color);
+}
+
+// FORM HANDLING
+function handleSubmit(e) {
+    e.preventDefault();
+    showNotification('Message transmitted successfully. We will respond in raw format.');
+    e.target.reset();
+}
+
+// CANVAS BACKGROUND ANIMATION
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
+let width, height;
+let particles = [];
+
+function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+}
+
+window.addEventListener('resize', resize);
+resize();
+
+class Particle {
+    constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = Math.random() * 4 + 1;
+        this.speedX = Math.random() * 2 - 1;
+        this.speedY = Math.random() * 2 - 1;
+        this.color = Math.random() > 0.5 ? '#0a0a0a' : '#ff2a2a';
+    }
+
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x > width) this.x = 0;
+        if (this.x < 0) this.x = width;
+        if (this.y > height) this.y = 0;
+        if (this.y < 0) this.y = height;
+    }
+
+    draw() {
+        ctx.fillStyle = this.color;
+        ctx.fillRect(this.x, this.y, this.size, this.size);
+    }
+}
+
+for (let i = 0; i < 50; i++) {
+    particles.push(new Particle());
+}
+
+function animate() {
+    ctx.clearRect(0, 0, width, height);
+    particles.forEach(p => {
+        p.update();
+        p.draw();
+    });
+    requestAnimationFrame(animate);
+}
+animate();
+
+// KEYBOARD SHORTCUTS
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        showPage('home');
+    }
+    if (e.key === '1') showPage('home');
+    if (e.key === '2') showPage('about');
+    if (e.key === '3') showPage('work');
+    if (e.key === '4') showPage('services');
+    if (e.key === '5') showPage('lab');
+    if (e.key === '6') showPage('contact');
+    if (e.key === '7') showPage('manifesto');
+});
+
+// CONSOLE EASTER EGG
+console.log('%c BRUTALIST.OS ', 'background: #ff2a2a; color: white; font-size: 40px; font-weight: bold;');
+console.log('%cYou are inspecting raw structure. Respect concrete.', 'font-size: 14px; font-family: monospace;');
+</script>
+</body>
+</html>
