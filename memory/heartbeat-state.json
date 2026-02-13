@@ -1,0 +1,22 @@
+{
+  "lastChecks": {
+    "email": null,
+    "calendar": null,
+    "weather": null,
+    "slack": null,
+    "skillLearned": "clawdbot-filesystem",
+    "lastSkillLearnTime": 1770911400,
+    "memoryUpdated": 1770912660,
+    "statusChecked": 1770882000,
+    "todoUpdated": 1770911400,
+    "workspaceImproved": 1707125580
+  },
+  "nightTasks": {
+    "lastTask": "memory-maintenance",
+    "rotationIndex": 4
+  },
+  "issuesFound": [
+    "iMessage channel: imsg rpc not ready - permission denied to Messages database (ongoing since January, requires manual permission grant)",
+    "WhatsApp channel: linked but gateway not linked (no WhatsApp Web session, requires manual session setup)"
+  ]
+}
