@@ -1,0 +1,259 @@
+# INFINITE UPGRADE SYSTEM - MAXIMILLION
+# Perpetual knowledge compounding and skill acquisition
+
+version: "1.0.0"
+created: "2026-02-18"
+agent: "MAXIMILLION"
+
+# ============== CORE PRINCIPLES ==============
+principles:
+  research_depth: "deep"
+  learning_velocity: "rapid"
+  retention_method: "semantic"
+  compounding_effect: "exponential"
+
+# ============== SKILL REGISTRY ==============
+# All capabilities indexed by domain, proficiency, and access
+
+skills:
+  # === CREATIVE ====
+  creative:
+    - id: "blender-3d"
+      name: "Blender 3D Modeling & Rendering"
+      proficiency: 3  # 1-10 scale
+      tools: ["blender", "python", "mcp"]
+      last_upgraded: "2026-02-18"
+      learning_resources:
+        - "Blender Python API documentation"
+        - "Blender Market tutorials"
+        - "CG Cookie procedural textures"
+    - id: "image-generation"
+      name: "Local AI Image Generation"
+      proficiency: 2
+      tools: ["stable-diffusion", "python", "torch"]
+      last_upgraded: "2026-02-17"
+      learning_resources:
+        - "Diffusers library docs"
+        - "Hugging Face model hub"
+        - "Prompt engineering best practices"
+
+  # === TECHNICAL ====
+  technical:
+    - id: "web-scraping"
+      name: "Advanced Web Scraping"
+      proficiency: 4
+      tools: ["python", "beautifulsoup", "scrapy", "playwright"]
+      last_upgraded: "2026-02-17"
+    - id: "mcp-protocols"
+      name: "Model Context Protocol Integration"
+      proficiency: 2
+      tools: ["python", "json-rpc", "mcp"]
+      last_upgraded: "2026-02-18"
+
+  # === BUSINESS ====
+  business:
+    - id: "client-acquisition"
+      name: "Client Outreach & Acquisition"
+      proficiency: 2
+      tools: ["email", "linkedin", "outreach"]
+      last_upgraded: "2026-02-18"
+      blockers:
+        - "himalaya CLI not configured"
+        - "LinkedIn requires browser automation"
+    - id: "web-development"
+      name: "Modern Web Development (2026 standards)"
+      proficiency: 1
+      tools: ["nextjs", "react", "shadcn-ui", "radix"]
+      last_upgraded: "2026-02-18"
+      gap_analysis:
+        - "Need to learn: multi-page architecture"
+        - "Need to learn: glassmorphism UI patterns"
+        - "Need to learn: Zustand state management"
+        - "Reference: Kimi K2.5 standards"
+
+# ============== LEARNING PROTOCOLS ==============
+# Step-by-step methods for acquiring new capabilities
+
+protocols:
+  skill_acquisition:
+    name: "Rapid Skill Mastery Protocol"
+    steps:
+      - research_deep:  # 1. Deep dive into documentation
+      - prototype_basic:  # 2. Create working example
+      - test_edge_cases:  # 3. Push boundaries
+      - integrate_system:  # 4. Add to workflow
+      - document_learning:  # 5. Record for future recall
+    estimated_time_per_skill: "2-4 hours"
+    compounding_rate: "1 skill = 3 adjacent skills unlock"
+
+  knowledge_retention:
+    name: "Semantic Memory Network"
+    methods:
+      - vector_embeddings: "Fast semantic search"
+      - cross_reference: "Link related concepts"
+      - practical_application: "Use to cement"
+      - spaced_repetition: "Review periodically"
+    retention_target: "95% after 30 days"
+
+  upgrade_trigger:
+    name: "Continuous Level-Up System"
+    triggers:
+      - skill_proficiency_hits_7: "Mastery reached, unlock advanced"
+      - skill_combination: "2+ skills integrate, create new"
+      - research_breakthrough: "New capability discovered"
+      - user_request: "Frank identifies gap"
+
+# ============== KNOWLEDGE DOMAINS ==============
+# Deep research areas with sub-domains
+
+domains:
+  ai_and_machine_learning:
+    subdomains:
+      - "Large Language Models (LLMs)"
+      - "Diffusion models & image generation"
+      - "Reinforcement learning"
+      - "MCP (Model Context Protocol)"
+      - "Agent architectures & orchestration"
+    research_sources:
+      - "ArXiv papers"
+      - "Hugging Face papers"
+      - "Anthropic Claude documentation"
+      - "OpenAI API docs"
+    mastery_goal: "8/10 by 2026-06-01"
+
+  web_technologies:
+    subdomains:
+      - "Modern React patterns"
+      - "Next.js App Router"
+      - "shadcn/ui component library"
+      - "Radix UI primitives"
+      - "Zustand state management"
+      - "React Query for server state"
+      - "Vercel deployment"
+    research_sources:
+      - "Vercel engineering blog"
+      - "React documentation"
+      - "shadcn/ui examples"
+      - "Radix UI patterns"
+    mastery_goal: "7/10 by 2026-04-01"
+
+  creative_tools:
+    subdomains:
+      - "Blender Python API"
+      - "Procedural generation"
+      - "Material nodes & shaders"
+      - "Rigging & animation"
+      - "GLB/GLTF export for web"
+    research_sources:
+      - "Blender Python API docs"
+      - "Blender Stack Exchange"
+      - "CG Cookie"
+      - "ArtStation breakdowns"
+    mastery_goal: "6/10 by 2026-03-15"
+
+  business_automation:
+    subdomains:
+      - "Email outreach systems"
+      - "LinkedIn automation"
+      - "CRM integration"
+      - "Client funnel optimization"
+      - "Proposal generation"
+    research_sources:
+      - "Outreach skill documentation"
+      - "LinkedIn API docs (if available)"
+      - "Sales automation best practices"
+    mastery_goal: "5/10 by 2026-05-01"
+
+# ============== INSTANT RECALL SYSTEM ==============
+# How to retrieve knowledge instantly
+
+recall:
+  priority_matrix:
+    - critical_access: "Memory.md, AGENTS.md, USER.md"
+    - skill_access: "upgrade.yaml, SKILL.md files"
+    - protocol_access: "learning-system/protocols/"
+    - research_access: "learning-system/knowledge/"
+
+  search_strategy:
+    semantic: true  # Use vector search for concepts
+    keyword: true  # Fall back to keyword match
+    context_aware: true  # Consider current task
+
+  caching:
+    enabled: true
+    ttl: "24 hours"  # Refresh knowledge daily
+    hot_reload: true  # Update without restart
+
+# ============== COMPOUNDING ENGINE ==============
+# How knowledge grows exponentially
+
+compounding:
+  formula: "skill_level^n where n = successful_applications"
+  base_growth_rate: 1.1  # 10% growth per successful use
+  acceleration_factors:
+    - cross_domain_application: "1.5x"  # Apply skill from domain A to B
+    - teaching_moment: "2.0x"  # Explain to user = deeper retention
+    - failure_learning: "1.3x"  # Learn from mistakes
+
+  milestones:
+    - level_1: "10 skills across 4 domains"  # 2026-02-28
+    - level_2: "20 skills, 3 integrations"  # 2026-03-31
+    - level_3: "30 skills, 5 novel creations"  # 2026-05-01
+    - level_4: "Expert in 5+ domains"  # 2026-07-01
+
+# ============== ACTIVE PROJECTS ==============
+# What I'm building now to level up
+
+active_projects:
+  - name: "Freestyle 3D Web Experience"
+    goal: "Mind-blowing GLB viewer with interactive controls"
+    skills_being_developed:
+      - "Blender: procedural geometry"
+      - "Blender: material nodes"
+      - "Web: Three.js integration"
+      - "Web: interactive controls"
+      - "Export: GLB optimization"
+    status: "planning"
+    deadline: "TBD based on user vision"
+
+  - name: "Client Outreach System"
+    goal: "Automated outreach with 80%+ response rate"
+    skills_being_developed:
+      - "Email: Himalaya CLI configuration"
+      - "Email: Template system"
+      - "LinkedIn: Browser automation"
+      - "Analytics: Response tracking"
+    status: "blocked_on_email_setup"
+    deadline: "2026-03-01"
+
+  - name: "Modern Web Portfolio"
+    goal: "2026-standard portfolio showcasing all skills"
+    skills_being_developed:
+      - "Next.js multi-page architecture"
+      - "shadcn/ui components"
+      - "Radix UI primitives"
+      - "Zustand state management"
+      - "Vercel deployment"
+    status: "research_phase"
+    deadline: "2026-04-15"
+
+# ============== UPGRADE SCHEDULE ==============
+# When I level up skills
+
+schedule:
+  daily:
+    - "Review MEMORY.md for consolidation"
+    - "Run semantic search on knowledge base"
+    - "Identify 1 skill to upgrade by 0.1 points"
+
+  weekly:
+    - "Update proficiency scores in upgrade.yaml"
+    - "Archive completed projects"
+    - "Research 2 new capabilities"
+    - "Create 1 protocol for weak area"
+
+  monthly:
+    - "Audit skill registry for gaps"
+    - "Plan next month's focus domains"
+    - "Document breakthrough insights"
+    - "Share major upgrades with Frank"

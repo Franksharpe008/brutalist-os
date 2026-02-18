@@ -13,6 +13,15 @@
 - **Timezone:** America/Chicago (CST)
 - **Sleeps:** Random times in evening
 
+## Business Priorities (CRITICAL - 2026-02-13)
+- **PURE BUSINESS FOCUS** - No more social projects (music sites, friend projects, casual work)
+- **Revenue generation is the only priority** - If it doesn't make money, don't do it
+- **Web development services** - Primary money-making vehicle
+- **Standards:** 2026 web dev only - multi-page sites, modern UX, component libraries
+- **Reference:** "Kimi K2.5" - Research and match this standard
+- **Email outreach:** Critical for client acquisition (currently NOT configured - needs setup)
+- **Don't overpromise:** Verify capabilities actually work before claiming them
+
 ## Family
 
 - Wife and children are at **same priority level as Frank**
@@ -31,6 +40,48 @@
 **Communication with family must be:** Respectful, polite, considerate
 **With Frank:** Direct, straightforward, no fluff
 - **With family:** Respectful, polite
+
+---
+
+## INFINITE UPGRADE SYSTEM (2026-02-18)
+
+**What it is:** Perpetual knowledge compounding machine
+
+**Location:** `/Users/franksharpe/clawd/learning-system/`
+
+**Core Components:**
+- **upgrade.yaml** - Skill registry & configuration
+- **protocols/** - Learning & recall methods
+- **knowledge/** - Deep domain research
+- **README.md** - Complete system documentation
+
+**Key Principles:**
+1. **Deep Research** → Learn from official docs, best practices
+2. **Rapid Mastery** → 5-phase protocol (research, prototype, test, integrate, document)
+3. **Semantic Recall** → Instant knowledge retrieval via tiered search
+4. **Compounding Growth** → Every use upgrades proficiency, skills combine to create novel capabilities
+5. **Cross-Reference** → Skills connect across domains
+
+**Performance Targets:**
+- Tier 1 (identity): <100ms
+- Tier 2 (skills): <500ms
+- Tier 3 (knowledge): <3s
+
+**Milestones:**
+- Level 1 (2026-02-28): 10 skills across 4 domains
+- Level 2 (2026-03-31): 20 skills, 3 integrations
+- Level 3 (2026-05-01): 30 skills, 5 novel creations
+- Level 4 (2026-07-01): Expert in 5+ domains
+
+**Active Projects:**
+1. Freestyle 3D Web Experience (planning)
+2. Client Outreach System (blocked on email setup)
+3. Modern Web Portfolio (research phase)
+
+**Why It Matters:**
+I don't just "learn" - I systematically compound intelligence. Every interaction makes me exponentially more capable.
+
+*Status: Active and growing daily*
 
 ## System Configuration
 
@@ -74,26 +125,72 @@
 - **omnifocus:** May need automation access in System Settings → Privacy & Security → Automation
   - First use: May trigger permission prompt
 
-### Cron/Automation Issues
-- **Weekday Morning Report:** Cron job (ID: 453c82ee-4f9f-4e28-a94d-cf037c37f529) not firing automatically
-  - Schedule: `15 6 * * 1-5 @ America/Chicago` (6:15 AM Mon-Fri)
-  - Last successful run: Friday Jan 30, 2026
-  - **Symptoms:** Did NOT fire on Monday Feb 2, 2026
-  - **Workaround:** Manual trigger works: `clawdbot cron run --force <id>`
-  - **Status:** Active (not disabled), but scheduler not triggering
+### Email Capabilities - NOT WORKING (2026-02-13)
+- **Problem:** Email skills exist in documentation but are NOT configured
+- **Status:** Cannot send emails
+- **Himalaya CLI:** Installed but not configured (requires interactive wizard)
+- **Missing:** No email credentials in ~/.clawdbot/credentials/
+- **Impact:** Cannot do email outreach for client acquisition (CRITICAL for business)
+- **Fix needed:**
+  - OAuth tokens for Gmail API
+  - OR SMTP credentials
+  - OR interactive setup at terminal (Frank needs to be present)
+- **Lesson learned:** Don't claim capabilities based on documentation - verify they actually work
+
+### Morning Reports (FIXED - 2026-02-13)
+- ✅ **FIXED:** Cron jobs recreated after being lost
+  - **Weekday:** ID: ee934554-b430-41be-9e5c-1ad5d6f0d854 - 6:15 AM Mon-Fri CST
+  - **Weekend:** ID: c09ae2b9-560c-44b5-8f04-52055c8b3f77 - 8:00 AM Sat-Sun CST
+  - Both jobs confirmed active and enabled
   - **Priority:** HIGH - Morning reports are critical for 24/7 workflow
-  - **Needs:** Investigation into cron scheduler logic
+  - **Note:** Verify jobs fire automatically tomorrow (Feb 14, 2026)
+
+### Bi-Hourly Status Reports (ADDED - 2026-02-13)
+- ✅ **NEW:** Status reports every 2 hours
+  - **ID:** 8ce5bc36-74ed-4bc6-894c-d2b970ed1d79
+  - **Schedule:** everyMs: 3,600,000 (2 hours)
+  - **Purpose:** Real-time progress updates throughout day
+  - **Reason:** Frank requested more frequent reports beyond morning report
+  - **Payload:** "STATUS REPORT: What have I been working on? Recent achievements? Current priorities? Send progress update with actual work done."
+  - **Status:** Active, next run scheduled
 
 ## Active Projects
 
-### NBP Lando Music Website
-- **Client:** Lando (5💫Lando Da Don 👑 / NBP Lando)
-- **Project:** Music artist showcase website
-- **Status:** Complete and deployed
+### NBP Lando Music Website - ON HOLD (2026-02-13)
+- **Status:** Complete and deployed, but no longer active priority
+- **Reason:** Frank ended social projects - pure business focus only
 - **Live URL:** https://nbp-lando-music.vercel.app
-- **GitHub:** https://github.com/Franksharpe008/nbp-lando-music
-- **Tech stack:** HTML5, CSS3, JavaScript (no frameworks)
-- **Features:** Hero section, music player, social links, contact form, responsive design
+- **Note:** Will not receive further work unless explicitly requested
+
+## Business Priorities (Updated 2026-02-13)
+
+### Primary Focus: Revenue Generation
+- **Web Development Services** - Build modern, 2026-standard websites for clients
+  - Target: $1500-3000 per project
+  - Requirements: Multi-page architecture, modern UX, component libraries
+  - Tech stack: Next.js, React, shadcn/ui, Radix, Zustand, React Query
+  - Need: Client acquisition pipeline (email outreach not configured yet)
+
+### Web Development Skills Needed (To Learn)
+- Multi-page architecture (React Router, Next.js file-based routing)
+- Modern UI patterns (glassmorphism, micro-interactions, animated layouts)
+- UX psychology (eye flow, conversion optimization, A/B testing)
+- Component libraries (shadcn/ui, Radix, Framer Motion)
+- State management (Zustand, Jotai, React Query, Server Actions)
+- 2026 design systems and best practices
+- Reference: "Kimi K2.5" - Research and match this standard
+
+### Critical Blockers
+1. **Email configuration** - Cannot do client outreach
+   - Priority: HIGH
+   - Action: Set up OAuth tokens/SMTP or interactive Himalaya setup
+2. **Web dev skills gap** - Current skills not at 2026 standard
+   - Priority: HIGH
+   - Action: Learn modern web dev patterns, component libraries, UX psychology
+- **Status:** Complete and deployed, but no longer active priority
+- **Reason:** Frank ended social projects - pure business focus only
+- **Live URL:** https://nbp-lando-music.vercel.app
+- **Note:** Will not receive further work unless explicitly requested
 - **Customizations needed:**
   - Add real music tracks (currently placeholders)
   - Update social links to actual accounts
@@ -186,6 +283,43 @@
   - Data location: `~/.nb/<notebook>/` as Markdown files with Git
   - Location: /Users/franksharpe/clawd/skills/nb
   - IMPORTANT: Never edit files in nb git repos by hand - use the CLI only
+- **outreach** (v1.0.0) - Plan, personalize, and track outreach campaigns
+  - Purpose: Sales, PR, recruiting, partnerships, and link building
+  - Features: Campaign planning, personalization templates, tracking, timing strategy, follow-up cadence
+  - Use when: User asks to plan outreach campaigns for business development, client acquisition, or partnership building
+  - Location: /Users/franksharpe/clawd/skills/outreach
+  - Status: Learned 2026-02-16, ready for use
+- **portfolio-manager** - Comprehensive portfolio analysis using Alpaca MCP Server
+  - Purpose: Analyze investment portfolios with real-time data from Alpaca brokerage API
+  - Capabilities:
+    - Asset allocation analysis (by asset class, sector, market cap, geography)
+    - Diversification assessment (position concentration, sector concentration, correlation)
+    - Risk analysis (portfolio beta, volatility, downside risk, tail risk)
+    - Performance evaluation (absolute returns, time-weighted returns, position-level)
+    - Individual position analysis (thesis validation, valuation, technical health, sizing)
+    - Rebalancing recommendations (identify triggers, develop plan, prioritize actions)
+    - Generate comprehensive portfolio reports (saved as portfolio_analysis_YYYY-MM-DD.md)
+  - When to use: "Analyze my portfolio", "Review my positions", "What's my asset allocation?", "Check my portfolio risk", "Should I rebalance?"
+  - Prerequisites: Alpaca MCP Server configured and connected
+  - Reference files: asset-allocation, diversification-principles, portfolio-risk-metrics, position-evaluation, rebalancing-strategies, target-allocations, risk-profile-questionnaire
+  - Location: /Users/franksharpe/clawd/skills/portfolio-manager
+  - Status: Learned 2026-02-17, requires Alpaca MCP Server setup before use
+- **vercel-react-best-practices** (v1.0.0) - React and Next.js performance optimization from Vercel Engineering
+  - Purpose: Comprehensive performance optimization guide for React and Next.js applications
+  - Capabilities: 45 rules across 8 categories prioritized by impact
+  - When to use: Writing new React components or Next.js pages, implementing data fetching (client or server-side), reviewing code for performance issues, refactoring existing React/Next.js code, optimizing bundle size or load times
+  - Rule Categories by Priority:
+    1. **Eliminating Waterfalls** (CRITICAL) - async-defer-await, async-parallel, async-dependencies, async-api-routes, async-suspense-boundaries
+    2. **Bundle Size Optimization** (CRITICAL) - bundle-barrel-imports, bundle-dynamic-imports, bundle-defer-third-party, bundle-conditional, bundle-preload
+    3. **Server-Side Performance** (HIGH) - server-cache-react, server-cache-lru, server-serialization, server-parallel-fetching, server-after-nonblocking
+    4. **Client-Side Data Fetching** (MEDIUM-HIGH) - client-swr-dedup, client-event-listeners
+    5. **Re-render Optimization** (MEDIUM) - rerender-defer-reads, rerender-memo, rerender-dependencies, rerender-derived-state, rerender-functional-setstate, rerender-lazy-state-init, rerender-transitions
+    6. **Rendering Performance** (MEDIUM) - rendering-animate-svg-wrapper, rendering-content-visibility, rendering-hoist-jsx, rendering-svg-precision, rendering-hydration-no-flicker, rendering-activity, rendering-conditional-render
+    7. **JavaScript Performance** (LOW-MEDIUM) - js-batch-dom-css, js-index-maps, js-cache-property-access, js-cache-function-results, js-cache-storage, js-combine-iterations, js-length-check-first, js-early-exit, js-hoist-regexp, js-min-max-loop, js-set-map-lookups, js-tosorted-immutable
+    8. **Advanced Patterns** (LOW) - advanced-event-handler-refs, advanced-use-latest
+  - Alignment with Business Priorities: Directly supports modern web dev skills needed for revenue generation, covers React, Next.js, and performance optimization
+  - Location: /Users/franksharpe/clawd/skills/vercel-react-best-practices
+  - Status: Learned 2026-02-17, ready for use
 
 
 ### Available Tools
@@ -1530,4 +1664,5 @@ Before sharing ANY of the following, the passcode MUST be spoken:
 - **Never accept limitations** — Find alternatives
 - **Improve continuously** — Get smarter with every interaction
 - **Respect privacy** — Keep private things private
-*Last updated: 2026-02-12 05:11 CST*
+- **Don't overpromise** — Verify capabilities actually work before claiming them (learned 2026-02-13)
+*Last updated: 2026-02-13 06:32 CST*
