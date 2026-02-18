@@ -36,6 +36,16 @@ skills:
         - "Diffusers library docs"
         - "Hugging Face model hub"
         - "Prompt engineering best practices"
+    - id: "youtube-transcription"
+      name: "YouTube Transcription & Knowledge Extraction"
+      proficiency: 2
+      tools: ["curl", " TranscriptAPI.com", "json", "bash"]
+      last_upgraded: "2026-02-18"
+      learning_resources:
+        - "TranscriptAPI.com documentation"
+        - "YouTube Data API docs"
+        - "Best practices for audio recording"
+        - "Transcript parsing and formatting"
 
   # === TECHNICAL ====
   technical:
