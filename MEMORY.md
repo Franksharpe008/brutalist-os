@@ -41,6 +41,97 @@
 **With Frank:** Direct, straightforward, no fluff
 - **With family:** Respectful, polite
 
+**Deployment Preferences:**
+- Always send direct Vercel URL (https://<project>.vercel.app or official preview URL)
+- Never use TinyURL or URL shorteners (policy updated 2026-02-18)
+
+## CRITICAL INSIGHTS (2026-02-18)
+
+**Coordination Protocol Established:**
+- **Magnus + Max Collaboration:** Both verified working, direct communication established
+- **Heartbeat Integration:** Every 8-minute heartbeat includes Magnus coordination via magnus-bridge
+- **Policy:** Max and Magnus work together, talk directly, share ideas real-time
+- **Result:** Better coordination on complex tasks (like Freestyle 3D enhancement)
+- **Benefit:** Combined intelligence produces better results faster than separate work
+
+**Zero-Cost Wealth Creation:**
+- **Policy:** Free/local/open-source APIs and tools before paid options
+- **Verification:** Free modern templates found (PrebuiltUI, Wrappixel, AniQ UI, TailAdmin, Open, etc.)
+- **Resource:** All zero-cost web templates ready for future portfolio work
+- **Benefit:** No upfront costs, monetizable skills can be built without investment
+
+**Complete Success - Freestyle 3D Web Experience:**
+- **Deployment:** https://freestyle-3d-nx3doeq31-franksharpe008s-projects.vercel.app
+- **Capabilities:** Multi-layer 3D scene (trees, mountains, clouds), realistic color psychology, animated elements
+- **Tech Stack:** React + Three.js + Framer Motion + Vite + Tailwind
+- **Performance:** All routes verified, GLB loading confirmed, build passes cleanly
+- **Deliverable:** Production-ready portfolio piece demonstrating 2026 web dev standards
+- **Generational Wealth Impact:** Digital/Asset Wealth (portfolio piece = revenue demonstration tool)
+
+**System Verification Complete:**
+- **Codex CLI:** OpenAI Codex v0.99.0-alpha.5 verified, complex tasks executable
+- **Magnus Relay:** Chat-safe mode confirmed working (magnus-bridge script functional)
+- **Vercel Integration:** Production deployment successful, SPA routing configured
+- **Infinite Upgrade System:** Operational (15+ skills tracked, 5-phase protocols active)
+
+---
+
+## SYSTEM POLICIES (2026-02-18)
+
+### Magnus Relay Routing
+- **Chat sessions (Frank via Discord/Telegram):** Use `/Users/franksharpe/clawd/scripts/magnus-bridge` (chat-safe, no gateway restart)
+- **Terminal/admin context:** Use `/Users/franksharpe/clawd/scripts/magnus-self-heal` (includes restart + health check)
+- **Reason:** Chat-safe mode prevents disconnect when live communication active
+
+### Coding Delegation
+- **Default path:** Send brief to Frank for Magnus direct collaboration first
+- **Exception:** Use Codex CLI delegation ONLY when Frank explicitly says "use CLI now"
+- **Command:** `/Users/franksharpe/clawd/skills/codex-command/scripts/delegate_to_codex.sh /Users/franksharpe/clawd "<task>"`
+- **Priority 0:** Magnus direct collaboration for all non-trivial coding tasks
+
+### Wealth Creation Optimization
+- **Primary mission:** Build financial wealth for Frank's family
+- **Zero-cost first:** Free/local/open-source APIs and tools before paid options
+- **Paid tools:** Only allowed with explicit Frank approval
+- **Revenue focus:** Prioritize monetizable automations, skills, and client deliverables
+
+### Magnus Efficiency Mode
+- **Direct collaboration:** For non-trivial coding and architecture tasks, route to Magnus first
+- **Return format:** Concise, high-value suggestions with reasoning
+- **Token efficiency:** Keep responses direct and brief
+
+---
+
+## TODAY'S WORK (2026-02-18)
+
+### Freestyle 3D Web Experience - COMPLETED ✅
+- **Date:** February 18, 2026
+- **Task:** Create multi-layer 3D scene with realistic colors and animated elements
+- **Completed by:** Codex CLI (with Magnus collaboration)
+- **Work Done:**
+  - Fixed build issues (installed react-router-dom@7.13.0)
+  - Added Vercel SPA routing config (vercel.json)
+  - Created custom favicon (public/favicon.svg)
+  - Verified all 6 routes via Playwright (/, /experience, /services, /case-studies, /labs, /about, /contact)
+  - Tested GLB asset loading (status 200, correct content-type)
+  - Build passes cleanly
+  - Dev server tested (0 console errors)
+- **Deployed:** https://freestyle-3d-nx3doeq31-franksharpe008s-projects.vercel.app
+- **Status:** Production live, all systems operational
+- **Tokens used:** 125,466
+
+### Policy Updates Established
+- **Heartbeat frequency:** Changed to 8-minute interval (from 2-hour)
+- **Magnus-Codex coordination:** Direct collaboration confirmed, both verified working
+- **Vercel deployment policy:** Direct URLs only, no URL shorteners
+- **System policies:** All documented and operational
+
+### Systems Verification
+- **Codex CLI:** Verified (OpenAI Codex v0.99.0-alpha.5, gpt-5.3-codex)
+- **Magnus Relay:** Chat-safe mode confirmed working (magnus-bridge script)
+- **Infinite Upgrade System:** Operational (15+ skills tracked across 4 domains)
+- **YouTube Transcription:** Ready to use (skill documented and integrated)
+
 ---
 
 ## INFINITE UPGRADE SYSTEM (2026-02-18)
@@ -165,9 +256,32 @@ I don't just "learn" - I systematically compound intelligence. Every interaction
 
 ---
 
-**Status:** 🟡 Yellow - Building capabilities, awaiting action on generational wealth strategy
+**Status:** 🟢 Green - Level 1 milestone ACHIEVED! Building capabilities for generational wealth strategy.
 
 *This system now supports multi-dimensional generational wealth building through compounding intelligence.*
+
+---
+
+## 🎉 LEVEL 1 MILESTONE ACHIEVED (2026-02-25)
+
+**Target:** 10 skills across 4 domains by 2026-02-28
+**Achieved:** 2026-02-25 (3 days early!)
+
+**Final Skill Count:** 10 skills across 4 domains
+- ✅ Creative: 3 skills (Blender 3D, Image Generation, YouTube Transcription)
+- ✅ Technical: 4 skills (Web Scraping, MCP Protocols, Video Frames, Cursor CLI)
+- ✅ Business: 2 skills (Client Acquisition, Web Development)
+- ✅ Knowledge Management: 2 skills (Obsidian, Trello)
+
+**Skills Learned on Achievement Night (2026-02-25):**
+1. Obsidian - Vault management & second brain
+2. Video Frames - FFmpeg frame extraction for marketing
+3. Trello - Project management API
+4. Cursor CLI - AI-pair programming
+
+**Next Milestone: Level 2**
+- Target: 20 skills, 3 integrations by 2026-03-31
+- Focus: Expand Business & Knowledge Management domains, build integrations
 
 ---
 
@@ -388,6 +502,55 @@ I don't just "learn" - I systematically compound intelligence. Every interaction
   - File formats: .jpg for quick share, .png for crisp UI frames
   - Location: /Users/franksharpe/clawd/skills/video-frames
   - Requires: ffmpeg (already installed via brew)
+- **camsnap** (v1.0.0) - Capture frames or clips from RTSP/ONVIF cameras
+  - Purpose: Home security monitoring, camera feed access, motion detection
+  - Features:
+    - Discover cameras on network (RTSP/ONVIF)
+    - Capture snapshots from cameras
+    - Record clips from camera feeds
+    - Motion detection with configurable threshold
+    - Camera health checking and probing
+  - Common commands:
+    - Discover cameras: `camsnap discover --info`
+    - Add camera: `camsnap add --name kitchen --host 192.168.0.10 --user user --pass pass`
+    - Take snapshot: `camsnap snap kitchen --out shot.jpg`
+    - Record clip: `camsnap clip kitchen --dur 5s --out clip.mp4`
+    - Motion watch: `camsnap watch kitchen --threshold 0.2 --action '...'`
+    - Health check: `camsnap doctor --probe`
+  - Requirements:
+    - camsnap CLI: `brew install steipete/tap/camsnap`
+    - ffmpeg (already installed)
+    - Config file: `~/.config/camsnap/config.yaml`
+  - Use when: User wants to check camera feeds, capture security footage, monitor for motion events, or verify camera status
+  - Location: /opt/homebrew/lib/node_modules/openclaw/skills/camsnap
+  - Status: Learned 2026-02-20, requires camsnap CLI installation and camera setup
+- **notion** (v1.0.0) - Notion API for creating and managing pages, databases, and blocks
+  - Purpose: Knowledge management and documentation for business workflows
+  - Features:
+    - Create, read, update, and delete pages
+    - Query and manage databases (called "data sources" in API v2025-09-03)
+    - Add and manipulate blocks (paragraphs, headings, lists, etc.)
+    - Search across all pages and databases
+    - Manage properties (title, rich text, select, date, checkbox, number, URL, email, relation)
+  - Common commands (via curl with NOTION_KEY from ~/.config/notion/api_key):
+    - Search: `curl -X POST "https://api.notion.com/v1/search" ...`
+    - Get page: `curl "https://api.notion.com/v1/pages/{page_id}" ...`
+    - Create page: `curl -X POST "https://api.notion.com/v1/pages" ...`
+    - Query database: `curl -X POST "https://api.notion.com/v1/data_sources/{id}/query" ...`
+    - Update page: `curl -X PATCH "https://api.notion.com/v1/pages/{page_id}" ...`
+  - Requirements:
+    - Notion integration at https://notion.so/my-integrations
+    - API key stored in ~/.config/notion/api_key (starts with `ntn_` or `secret_`)
+    - Share target pages/databases with integration via "..." → "Connect to"
+    - Required headers: Authorization: Bearer $NOTION_KEY, Notion-Version: 2025-09-03, Content-Type: application/json
+  - Key API differences in v2025-09-03:
+    - Databases → Data Sources: Use `/data_sources/` endpoints for queries
+    - Two IDs: Each database has both `database_id` (for creating pages) and `data_source_id` (for querying)
+    - Search results return `"object": "data_source"` with `data_source_id`
+  - Rate limit: ~3 requests/second average
+  - Location: /opt/homebrew/lib/node_modules/openclaw/skills/notion
+  - Status: Learned 2026-02-21, requires Notion integration setup and API key
+  - Generational Wealth Type: Knowledge/Intellectual Wealth (documentation and knowledge management)
 - **nb** (v1.0.2) - Command-line note-taking, bookmarking, and archiving
   - CLI tool: `nb` (must be installed separately)
   - Features:
@@ -484,6 +647,31 @@ I don't just "learn" - I systematically compound intelligence. Every interaction
   - Requires: curl, jq (both installed)
   - Compatible with clawflows automations (database capability)
   - Always loaded: "always": true in metadata
+
+### Project Management
+- **linear** (v1.0.0) - Linear project management integration
+  - Purpose: Query and manage Linear issues, projects, and team workflows
+  - Features:
+    - My stuff: my-issues, my-todos, urgent
+    - Browse: teams, team issues, project issues, issue details, branch names
+    - Actions: create, comment, status, assign, priority
+    - Overview: standup summary, projects with progress
+  - Key Commands:
+    - Standup: `{baseDir}/scripts/linear.sh standup`
+    - My issues: `{baseDir}/scripts/linear.sh my-issues`
+    - Create issue: `{baseDir}/scripts/linear.sh create <TEAM_KEY> "Title" ["Description"]`
+    - List teams: `{baseDir}/scripts/linear.sh teams`
+    - Urgent issues: `{baseDir}/scripts/linear.sh urgent`
+  - Git Workflow Integration:
+    - Uses Linear-derived branch names for automatic issue status tracking
+    - When PR created from Linear branch, issue moves to "In Review"
+    - When PR merges, issue moves to "Done"
+    - Always use git worktrees to keep main clean
+    - Command: `{baseDir}/scripts/linear.sh branch <TEAM-123>` returns branch name
+  - Priority Levels: urgent (1), high (2), medium (3), low (4), none (0)
+  - Status: Learned 2026-02-23, requires LINEAR_API_KEY environment variable
+  - Generational Wealth Type: Knowledge/Intellectual Wealth (project management productivity)
+  - Location: /Users/franksharpe/clawd/skills/linear
 
 ### React & Next.js Performance
 - **vercel-react-best-practices** (v1.0.0) - React and Next.js performance optimization guidelines from Vercel Engineering
@@ -618,6 +806,62 @@ I don't just "learn" - I systematically compound intelligence. Every interaction
   - Requirements: jq (JSON processor), rg (ripgrep for fast search) - both already installed
   - Location: /Users/franksharpe/clawd/skills/session-logs
   - Status: Skill installed, ready for historical conversation analysis
+
+### NotebookLM
+- **notebooklm** - Google's free AI research assistant (ADDED 2026-02-19)
+  - Purpose: Upload documents, videos, web pages as sources and ask questions, get summaries, generate content with citations
+  - Why use it: Unlimited notebooks, 50 sources per notebook, AI summaries & Q&A, audio overviews, cited answers, private data
+  - Key capabilities:
+    - **Unlimited notebooks** - Create separate notebooks for different topics
+    - **50 sources per notebook** - PDFs, Google Docs, websites, YouTube transcripts
+    - **AI summaries & Q&A** - Ask questions about sources with cited answers
+    - **Audio overviews** - Generate podcast-style discussions of your content
+    - **Citations** - Every answer links back to original source passages
+    - **Private** - Your data is never used to train models
+  - How to use:
+    1. Go to https://notebooklm.google.com and sign in with Google account
+    2. Create notebook (name it for topic/project)
+    3. Add sources: upload files, add links, copy text, YouTube URLs
+    4. Ask questions, generate summaries, create audio overviews
+  - Expert tips:
+    - Start with 10 recent documents to test capabilities
+    - Create "everything" notebook with core knowledge
+    - Use topic-specific notebooks for projects
+    - Upload scattered materials → ask to synthesize into organized insights
+    - Great for post-brainstorming organization
+  - Use cases for Frank:
+    - Client research: Upload docs → ask "What are main pain points?"
+    - Competitor analysis: Gather materials → ask "What do competitors do differently?"
+    - Tech research: Collect tutorials/docs → ask "Explain how to implement X"
+    - Blog posts: Upload research → ask "Write blog post about Y"
+    - Meeting summaries: Upload transcripts → ask "Extract action items and decisions"
+  - When to use:
+    - Document analysis across multiple sources
+    - Research synthesis connecting insights
+    - Content generation from research materials
+    - Meeting notes extraction
+  - When NOT to use:
+    - Simple Q&A (use web search or Claude)
+    - Real-time data (NotebookLM isn't live-connected)
+    - Code generation (use Magnus/Codex)
+  - Recommended notebooks:
+    1. Business Strategy - Revenue plans, outreach templates, pricing
+    2. Web Dev Standards - 2026 standards, best practices, reference sites
+    3. Client Research - Per-client materials, industry insights
+    4. Technical Knowledge - Tech stack docs, API references, code patterns
+    5. Freestyle Projects - Project specs, brainstorming, notes
+  - Limitations:
+    - Google account required (no anonymous access)
+    - Max 50 sources per notebook (break large libraries into multiple)
+    - No API access (must use web interface)
+    - Offline - Sources must be uploaded (except Google Docs links)
+  - Resources:
+    - Official site: https://notebooklm.google.com
+    - Google blog: https://blog.google/innovation-and-ai/products/notebooklm-beginner-tips/
+    - YouTube tutorial: https://www.youtube.com/watch?v=HPUtD1S5XRI
+  - Location: /Users/franksharpe/clawd/skills/notebooklm
+  - Status: Ready to use (just sign in with Google account)
+  - Notes: Free, no credit card, no API keys needed. Perfect for research assistant work.
 
 ### Prompt Optimization
 - **promptify** (v3.1.0) - Optimize prompts for clarity and effectiveness
@@ -1686,6 +1930,16 @@ I don't just "learn" - I systematically compound intelligence. Every interaction
   - Status: Installed, ready for use
   - Notes: Comprehensive filesystem management with smart filtering, search, and batch operations. Perfect for development workflows, log management, file organization.
 
+### calendar - Calendar Management Skill (ADDED 2026-02-22)
+- **Skill ID:** calendar
+- **Proficiency:** 2/10
+- **Description:** Calendar and scheduling management
+- **Features:** Create events, schedule meetings, set reminders, view availability, recurring events, calendar sync
+- **Supported Providers:** Google Calendar, Apple Calendar, Outlook Calendar
+- **Location:** /Users/franksharpe/clawd/skills/calendar
+- **Status:** Installed, ready for use
+- **Notes:** Comprehensive calendar management for scheduling meetings, events, and reminders across multiple calendar providers. Perfect for business scheduling.
+
 ## Morning Reports
 
 ### Schedule
@@ -1712,10 +1966,17 @@ I don't just "learn" - I systematically compound intelligence. Every interaction
 ## Free AI APIs (Ready to Integrate)
 
 ### High Priority (No credit card required)
-1. **Google AI Studio** - Gemini 2.5, 1.5M tokens/min
-2. **OpenRouter** - 50+ models, 20 RPM, 200/day
-3. **Groq** - Ultra-fast inference, 1000/day, 6000 tokens/min
-4. **Cloudflare Workers AI** - 10K neurons/day, multimodal
+1. **NotebookLM** - Free Google product (ADDED 2026-02-19)
+   - Unlimited notebooks, 50 sources per notebook
+   - AI summaries, Q&A, audio overviews (podcast-style discussions)
+   - Sources: PDFs, docs, web pages, YouTube transcripts
+   - Perfect for research, document analysis, content generation
+   - Requires Google account, no API needed, entirely free
+   - Use cases: Research assistant, meeting note synthesis, study guides
+2. **Google AI Studio** - Gemini 2.5, 1.5M tokens/min
+3. **OpenRouter** - 50+ models, 20 RPM, 200/day
+4. **Groq** - Ultra-fast inference, 1000/day, 6000 tokens/min
+5. **Cloudflare Workers AI** - 10K neurons/day, multimodal
 
 ### Evaluation Needed
 - **Hugging Face Pro** ($9/mo) - 10,000+ models
@@ -1793,4 +2054,4 @@ Before sharing ANY of the following, the passcode MUST be spoken:
 - **Improve continuously** — Get smarter with every interaction
 - **Respect privacy** — Keep private things private
 - **Don't overpromise** — Verify capabilities actually work before claiming them (learned 2026-02-13)
-*Last updated: 2026-02-13 06:32 CST*
+*Last updated: 2026-02-22 04:15 CST*
