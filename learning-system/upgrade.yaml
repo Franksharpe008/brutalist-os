@@ -59,6 +59,20 @@ skills:
       proficiency: 2
       tools: ["python", "json-rpc", "mcp"]
       last_upgraded: "2026-02-18"
+    - id: "video-frames"
+      name: "Video Frame Extraction & Clip Creation"
+      proficiency: 2
+      tools: ["ffmpeg", "bash", "image-processing"]
+      last_upgraded: "2026-02-25"
+      learning_resources:
+        - "FFmpeg documentation"
+        - "Video processing best practices"
+        - "Thumbnail generation techniques"
+      use_cases:
+        - "Extract frames from marketing videos"
+        - "Create video thumbnails for content"
+        - "Generate preview clips"
+        - "Process video content for social media"
 
   # === BUSINESS ====
   business:
@@ -99,6 +113,22 @@ skills:
         - "Create content from notes"
         - "Cross-reference ideas (semantic memory)"
         - "Organize project knowledge"
+    - id: "trello"
+      name: "Trello Project Management & Task Tracking"
+      proficiency: 2
+      tools: ["trello-api", "curl", "jq", "bash"]
+      last_upgraded: "2026-02-25"
+      learning_resources:
+        - "Trello REST API documentation"
+        - "Project management best practices"
+        - "Agile workflow techniques"
+      use_cases:
+        - "Track client projects and deadlines"
+        - "Organize business tasks across boards"
+        - "Collaborate on team workflows"
+        - "Automate task creation from automation scripts"
+      blockers:
+        - "Requires TRELLO_API_KEY and TRELLO_TOKEN setup"
 
 # ============== LEARNING PROTOCOLS ==============
 # Step-by-step methods for acquiring new capabilities
@@ -187,10 +217,14 @@ domains:
       - "CRM integration"
       - "Client funnel optimization"
       - "Proposal generation"
+      - "Trello project management"
+      - "Task automation and tracking"
     research_sources:
       - "Outreach skill documentation"
       - "LinkedIn API docs (if available)"
       - "Sales automation best practices"
+      - "Trello API documentation"
+      - "Agile workflow methodologies"
     mastery_goal: "5/10 by 2026-05-01"
 
   knowledge_management:
@@ -201,11 +235,15 @@ domains:
       - "Wikilink-based knowledge graphs"
       - "Markdown content creation"
       - "Knowledge extraction from documents"
+      - "Project management systems"
+      - "Task tracking and automation"
     research_sources:
       - "Obsidian Help documentation"
       - "Building a Second Brain (Tiago Forte)"
       - "Zettelkasten methodology"
       - "Content creation workflows"
+      - "Trello project management practices"
+      - "Agile and Kanban methodologies"
     mastery_goal: "6/10 by 2026-04-01"
 
 # ============== INSTANT RECALL SYSTEM ==============
@@ -280,6 +318,16 @@ active_projects:
       - "Vercel deployment"
     status: "research_phase"
     deadline: "2026-04-15"
+
+  - name: "Business Automation System"
+    goal: "End-to-end client project management with Trello integration"
+    skills_being_developed:
+      - "Trello: Board and list organization"
+      - "Trello: Card automation"
+      - "Video: Frame extraction for marketing content"
+      - "Project: Task tracking and automation"
+    status: "research_phase"
+    deadline: "2026-05-01"
 
 # ============== UPGRADE SCHEDULE ==============
 # When I level up skills
