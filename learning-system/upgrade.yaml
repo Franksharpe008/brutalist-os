@@ -73,6 +73,23 @@ skills:
         - "Create video thumbnails for content"
         - "Generate preview clips"
         - "Process video content for social media"
+    - id: "cursor-cli"
+      name: "Cursor CLI AI-Pair Programming"
+      proficiency: 2
+      tools: ["cursor-cli", "agent", "mcp", "ai-models"]
+      last_upgraded: "2026-02-25"
+      learning_resources:
+        - "Cursor CLI documentation"
+        - "AI-pair programming best practices"
+        - "MCP server integration"
+        - "Code review and refactoring workflows"
+      use_cases:
+        - "AI-assisted coding from terminal"
+        - "Code review and refactoring"
+        - "Debugging and troubleshooting"
+        - "CI/CD integration workflows"
+        - "Model switching for different tasks"
+        - "MCP server management"
 
   # === BUSINESS ====
   business:
@@ -189,11 +206,16 @@ domains:
       - "Zustand state management"
       - "React Query for server state"
       - "Vercel deployment"
+      - "AI-pair programming workflows"
+      - "Cursor CLI integration"
+      - "MCP server management"
     research_sources:
       - "Vercel engineering blog"
       - "React documentation"
       - "shadcn/ui examples"
       - "Radix UI patterns"
+      - "Cursor CLI documentation"
+      - "AI-assisted development best practices"
     mastery_goal: "7/10 by 2026-04-01"
 
   creative_tools:
