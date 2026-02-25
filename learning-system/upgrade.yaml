@@ -81,6 +81,25 @@ skills:
         - "Need to learn: Zustand state management"
         - "Reference: Kimi K2.5 standards"
 
+  # === KNOWLEDGE MANAGEMENT ====
+  knowledge_management:
+    - id: "obsidian"
+      name: "Obsidian Vault Management & Second Brain"
+      proficiency: 2
+      tools: ["obsidian-cli", "markdown", "wikilinks"]
+      last_upgraded: "2026-02-25"
+      learning_resources:
+        - "Obsidian Help documentation"
+        - "obsidian-cli GitHub repository"
+        - "Second brain methodologies"
+        - "Zettelkasten principles"
+      use_cases:
+        - "Store business insights and learnings"
+        - "Build wealth strategy knowledge base"
+        - "Create content from notes"
+        - "Cross-reference ideas (semantic memory)"
+        - "Organize project knowledge"
+
 # ============== LEARNING PROTOCOLS ==============
 # Step-by-step methods for acquiring new capabilities
 
@@ -173,6 +192,21 @@ domains:
       - "LinkedIn API docs (if available)"
       - "Sales automation best practices"
     mastery_goal: "5/10 by 2026-05-01"
+
+  knowledge_management:
+    subdomains:
+      - "Obsidian vault structure and organization"
+      - "Second brain methodologies"
+      - "Zettelkasten note-taking"
+      - "Wikilink-based knowledge graphs"
+      - "Markdown content creation"
+      - "Knowledge extraction from documents"
+    research_sources:
+      - "Obsidian Help documentation"
+      - "Building a Second Brain (Tiago Forte)"
+      - "Zettelkasten methodology"
+      - "Content creation workflows"
+    mastery_goal: "6/10 by 2026-04-01"
 
 # ============== INSTANT RECALL SYSTEM ==============
 # How to retrieve knowledge instantly
