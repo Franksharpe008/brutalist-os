@@ -4,16 +4,35 @@
     "calendar": null,
     "weather": null,
     "slack": null,
-    "skillLearned": "clawdbot-filesystem",
-    "lastSkillLearnTime": 1770911400,
-    "memoryUpdated": 1770912660,
-    "statusChecked": 1770882000,
-    "todoUpdated": 1770911400,
-    "workspaceImproved": 1707125580
+    "skillLearned": "obsidian",
+    "lastSkillLearnTime": 1740451500,
+    "memoryUpdated": 1740451500,
+    "statusChecked": 1740451600,
+    "todoUpdated": 1740451700,
+    "workspaceImproved": 1740451800,
+    "gitCommitted": 1740451900,
+    "magnusCoordinated": 1740450603,
+    "memoryAudit": 1740209870,
+    "morningReport": 1740223300,
+    "magnusBriefCreated": 1740450603,
+    "magnusCoordination": 1740450603
   },
   "nightTasks": {
-    "lastTask": "memory-maintenance",
-    "rotationIndex": 4
+    "lastTask": "skill-learning",
+    "rotationIndex": 0
+  },
+  "domains": {
+    "creative": 3,
+    "technical": 2,
+    "business": 2,
+    "knowledge_management": 1
+  },
+  "milestoneProgress": {
+    "level1": {
+      "target": "10 skills across 4 domains by 2026-02-28",
+      "current": "7/10 skills",
+      "domains": "4/4 ✓"
+    }
   },
   "issuesFound": [
     "iMessage channel: imsg rpc not ready - permission denied to Messages database (ongoing since January, requires manual permission grant)",
