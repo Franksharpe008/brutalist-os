@@ -4,13 +4,13 @@
     "calendar": null,
     "weather": null,
     "slack": null,
-    "skillLearned": "obsidian",
-    "lastSkillLearnTime": 1740451500,
-    "memoryUpdated": 1740451500,
-    "statusChecked": 1740451600,
-    "todoUpdated": 1740451700,
-    "workspaceImproved": 1740451800,
-    "gitCommitted": 1740451900,
+    "skillLearned": "video-frames,trello",
+    "lastSkillLearnTime": 1740451980,
+    "memoryUpdated": 1740452000,
+    "statusChecked": 1740452010,
+    "todoUpdated": 1740452020,
+    "workspaceImproved": 1740452030,
+    "gitCommitted": 1740452040,
     "magnusCoordinated": 1740450603,
     "memoryAudit": 1740209870,
     "morningReport": 1740223300,
@@ -19,19 +19,20 @@
   },
   "nightTasks": {
     "lastTask": "skill-learning",
-    "rotationIndex": 0
+    "rotationIndex": 1
   },
   "domains": {
     "creative": 3,
-    "technical": 2,
+    "technical": 3,
     "business": 2,
-    "knowledge_management": 1
+    "knowledge_management": 2
   },
   "milestoneProgress": {
     "level1": {
       "target": "10 skills across 4 domains by 2026-02-28",
-      "current": "7/10 skills",
-      "domains": "4/4 ✓"
+      "current": "9/10 skills",
+      "domains": "4/4 ✓",
+      "remaining": "1 skill needed"
     }
   },
   "issuesFound": [

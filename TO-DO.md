@@ -1,5 +1,19 @@
 # TO-DO - Maximillion
 
+## Completed - 2026-02-25 (2nd Update)
+
+- [x] Learned video-frames skill (Video Frame Extraction & Clip Creation - ffmpeg)
+- [x] Learned trello skill (Trello Project Management & Task Tracking - REST API)
+- [x] Updated learning-system/upgrade.yaml with both new skills
+- [x] Added Business Automation System project to active projects
+- [x] Created memory/2026-02-25-2.md documenting new skills
+- [x] Git committed all changes
+
+**Progress to Level 1 Milestone:**
+- Skills: 9/10 (need 1 more!)
+- Domains: 4/4 complete ✓
+- Deadline: 2026-02-28 (3 days remaining)
+
 ## Completed - 2026-02-25
 
 - [x] Learned obsidian skill (Obsidian Vault Management & Second Brain - v1.0.0)
