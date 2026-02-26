@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "buildCommand": "vercel deploy --prod --yes",
+  "ignoreCommand": "vercel deploy --prod --yes",
+  "outputDirectory": "dist",
+  "framework": null,
+  "team": {
+    "slug": "3lushooz-portfolio"
+  }
+}
